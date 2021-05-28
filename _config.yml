@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: Leafoliage Stack
 subtitle: ''
-description: ''
+description: 'Leafoliage各種文章的堆積處'
 keywords:
-author: John Doe
+author: Leafoliage
 language: en
 timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: https://leafoliage.github.io
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
