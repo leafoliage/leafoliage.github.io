@@ -96,7 +96,7 @@ logo:
 #   - gravatar: whether to create a favicon from your Gravatar
 favicon:
   desktop:
-    url: /images/favicon.ico
+    url: /images/logo.ico
     gravatar: false
   android:
     url: /images/favicon-192x192.png
