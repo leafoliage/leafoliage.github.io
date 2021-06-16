@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="不確定有多少人輕輕鬆鬆的就把自己的Hexo部落格架好了；也不可否認步驟其實不多、不難。但至少就我的情況來說，我真是踩了不少陷阱、碰到不少預期外的錯誤，花了我整整一天才把部落格架起來。所以這篇文章，我想要分享我到底遇到了哪些問題，以及我怎麼解決的，希望可以稍微幫到以後也遇到這些問題的人 :) Topic 1: 幫自己選一個theme開啟一個新的 hexo 專案之後要做的第一件事情，當然是先來挑一個">
+<meta property="og:type" content="article">
+<meta property="og:title" content="開始玩Hexo時你必須注意的那些事">
+<meta property="og:url" content="https://leafoliage.github.io/2021/06/16/must-notices-when-you-start-hexoing/index.html">
+<meta property="og:site_name" content="Leafoliage Stack">
+<meta property="og:description" content="不確定有多少人輕輕鬆鬆的就把自己的Hexo部落格架好了；也不可否認步驟其實不多、不難。但至少就我的情況來說，我真是踩了不少陷阱、碰到不少預期外的錯誤，花了我整整一天才把部落格架起來。所以這篇文章，我想要分享我到底遇到了哪些問題，以及我怎麼解決的，希望可以稍微幫到以後也遇到這些問題的人 :) Topic 1: 幫自己選一個theme開啟一個新的 hexo 專案之後要做的第一件事情，當然是先來挑一個">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.imgur.com/jJhSI57.png">
+<meta property="og:image" content="https://i.imgur.com/HPjp2kf.png">
+<meta property="og:image" content="https://i.imgur.com/dCSPwHI.png">
+<meta property="og:image" content="https://i.imgur.com/xL4D6nW.png">
+<meta property="og:image" content="https://i.imgur.com/jV9OBXc.png">
+<meta property="og:image" content="https://i.imgur.com/OZh27Gu.png">
+<meta property="og:image" content="https://i.imgur.com/bUvPUCQ.png">
+<meta property="article:published_time" content="2021-06-16T10:33:57.000Z">
+<meta property="article:modified_time" content="2021-06-16T02:34:50.381Z">
+<meta property="article:author" content="Leafoliage">
+<meta property="article:tag" content="hexo, problems">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.imgur.com/jJhSI57.png">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/logo.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>開始玩Hexo時你必須注意的那些事</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" "Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/projects/">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" aria-label="Next post " href="/2021/05/28/hello-world/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top " href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post " href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://leafoliage.github.io/2021/06/16/must-notices-when-you-start-hexoing/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://leafoliage.github.io/2021/06/16/must-notices-when-you-start-hexoing/&text=開始玩Hexo時你必須注意的那些事"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://leafoliage.github.io/2021/06/16/must-notices-when-you-start-hexoing/&title=開始玩Hexo時你必須注意的那些事"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://leafoliage.github.io/2021/06/16/must-notices-when-you-start-hexoing/&is_video=false&description=開始玩Hexo時你必須注意的那些事"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=開始玩Hexo時你必須注意的那些事&body=Check out this article: https://leafoliage.github.io/2021/06/16/must-notices-when-you-start-hexoing/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://leafoliage.github.io/2021/06/16/must-notices-when-you-start-hexoing/&title=開始玩Hexo時你必須注意的那些事"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://leafoliage.github.io/2021/06/16/must-notices-when-you-start-hexoing/&title=開始玩Hexo時你必須注意的那些事"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://leafoliage.github.io/2021/06/16/must-notices-when-you-start-hexoing/&title=開始玩Hexo時你必須注意的那些事"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://leafoliage.github.io/2021/06/16/must-notices-when-you-start-hexoing/&title=開始玩Hexo時你必須注意的那些事"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://leafoliage.github.io/2021/06/16/must-notices-when-you-start-hexoing/&name=開始玩Hexo時你必須注意的那些事&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://leafoliage.github.io/2021/06/16/must-notices-when-you-start-hexoing/&t=開始玩Hexo時你必須注意的那些事"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Topic-1-%E5%B9%AB%E8%87%AA%E5%B7%B1%E9%81%B8%E4%B8%80%E5%80%8Btheme"><span class="toc-number">1.</span> <span class="toc-text">Topic 1: 幫自己選一個theme</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Topic-2-%E5%9C%A8-Github-Pages-%E9%83%A8%E7%BD%B2%E7%B6%B2%E7%AB%99"><span class="toc-number">2.</span> <span class="toc-text">Topic 2: 在 Github Pages 部署網站</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Topic-3-Github%E5%BC%B7%E8%BF%AB%E6%88%91%E6%8C%91%E4%B8%80%E5%80%8B%E4%BB%96%E5%80%91%E7%9A%84theme"><span class="toc-number">3.</span> <span class="toc-text">Topic 3: Github強迫我挑一個他們的theme?!</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Conclusion-amp-%E5%BE%8C%E8%A8%98"><span class="toc-number">4.</span> <span class="toc-text">Conclusion &amp; 後記</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        開始玩Hexo時你必須注意的那些事
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Leafoliage</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2021-06-16T10:33:57.000Z" itemprop="datePublished">2021-06-16</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/hexo-problems/" rel="tag">hexo, problems</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>不確定有多少人輕輕鬆鬆的就把自己的Hexo部落格架好了；也不可否認步驟其實不多、不難。但至少就我的情況來說，我真是踩了不少陷阱、碰到不少預期外的錯誤，花了我整整<strong>一天</strong>才把部落格架起來。所以這篇文章，我想要分享我到底遇到了哪些問題，以及我怎麼解決的，希望可以稍微幫到以後也遇到這些問題的人 :)</p>
+<h2 id="Topic-1-幫自己選一個theme"><a href="#Topic-1-幫自己選一個theme" class="headerlink" title="Topic 1: 幫自己選一個theme"></a>Topic 1: 幫自己選一個theme</h2><p>開啟一個新的 hexo 專案之後要做的第一件事情，當然是先來挑一個 <a target="_blank" rel="noopener" href="https://hexo.io/themes/">theme</a> 啦。點選一個 theme 的標題會開啟那個 theme 的 Github 專案頁面；上面通常都已寫有安裝 theme 的方法。</p>
+<p><img src="https://i.imgur.com/jJhSI57.png" alt="hexo-themes"></p>
+<p>大多數 theme 作者提供的安裝方法是 <code>git clone</code> 他們的專案到 <code>/theme/</code> 資料夾底下。不過這麼做等於是在一個 git 專案底下再放一個 git 專案 - 頂層的專案不會記錄該 theme 裡面的變更；也就是要分成兩個 repository 來記錄變更。所以筆者個人比較喜歡的做法是，先 clone 到另外一個地方，再把所有內容物複製起來；接著在 <code>/theme/</code> 底下開一個該 theme 的資料夾，並貼上剛剛複製的東西。這應該是一個滿快滿簡單的作法。</p>
+<blockquote>
+<p>本來想找 git 有沒有只複製檔案下來的指令或選項，但是 git 目前似乎是沒有這樣的功能。唯有找到一個比較接近的是 <code>git arhchive --remote=&lt;url&gt;</code> ，但是它是把檔案打包成壓縮檔下載；而且筆者嘗試時也失敗了，比較不推。</p>
+</blockquote>
+<h2 id="Topic-2-在-Github-Pages-部署網站"><a href="#Topic-2-在-Github-Pages-部署網站" class="headerlink" title="Topic 2: 在 Github Pages 部署網站"></a>Topic 2: 在 Github Pages 部署網站</h2><p>Hexo 的官網有提供在 Github 上部署網站的<a target="_blank" rel="noopener" href="https://hexo.io/docs/github-pages">方法</a>。其中必須注意的是 hexo 的運作模式:  hexo 需要兩條分支，一條用來平常撰寫文章，另一條用來存放 build 完的檔案 (不爭氣如我在了解這個模式時不小心就被嚇到了QQ)。官網給的範例是，在 <code>source</code> 分支撰寫、在 <code>master</code> 分支部署。</p>
+<p><img src="https://i.imgur.com/HPjp2kf.png" alt="hexo-docs-for-deploy"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">on:</span><br><span class="line">  push:</span><br><span class="line">    branches:</span><br><span class="line">      - source  # 平常撰寫文章的分支</span><br><span class="line"></span><br><span class="line">jobs:</span><br><span class="line">  pages:</span><br><span class="line">    ... (省略)</span><br><span class="line">      - name: Deploy</span><br><span class="line">        uses: peaceiris/actions-gh-pages@v3</span><br><span class="line">        with:</span><br><span class="line">          github_token: $&#123;&#123; secrets.GITHUB_TOKEN &#125;&#125;</span><br><span class="line">          publish_dir: ./public</span><br><span class="line">          publish_branch: master  # 部署時 build 出來的分支</span><br></pre></td></tr></table></figure>
+
+<p>這當然是可以改的。不過改完這裡之後，不要忘了還有另外一個地方也要設定。在 setting 頁面中的 page 欄裡，我們可以選擇藥用哪個分支來 host 網站。如果是照官網操作，選 <code>master</code> 即可；反之則是設定為自己先前所指定的部署分支。</p>
+<p><img src="https://i.imgur.com/dCSPwHI.png" alt="deploy-branch-setting"></p>
+<h2 id="Topic-3-Github強迫我挑一個他們的theme"><a href="#Topic-3-Github強迫我挑一個他們的theme" class="headerlink" title="Topic 3: Github強迫我挑一個他們的theme?!"></a>Topic 3: Github強迫我挑一個他們的theme?!</h2><p>將寫好的 yml 檔推上去、選好 deploy branch，Github 就會開始幫我們 build 網站了。但是…事情還沒結束! 你大概會看到這個錯誤:</p>
+<blockquote>
+<p>You are attempting to use a Jekyll theme, “cactus”, which is not supported by GitHub Pages.<br>Please visit <a target="_blank" rel="noopener" href="https://pages.github.com/themes/">https://pages.github.com/themes/</a> for a list of supported themes.<br>If you are using the “theme” configuration variable for something other than a Jekyll theme,<br>we recommend you rename this variable throughout your site. </p>
+</blockquote>
+<p>如果在 Github 上沒看到這麼一段警告訊息，也可以翻翻 email 信箱。筆者個人的狀況印象中是… Github 顯示成功 deploy，信箱卻收到好幾封這樣的郵件；網站則是顯示 <code>404 page not found</code>。這是因為 Github Pages 的 theme 需要是一個 jekyll theme；使用非 jekyll 的 theme 似乎就會出現這種警告，網站也跑不出來。</p>
+<p><img src="https://i.imgur.com/xL4D6nW.png" alt="jekyll-theme-pic"></p>
+<p>筆者嘗試了一種 workaround，跟大家分享: </p>
+<ol>
+<li>在專案裡面，先將 theme 的名字改成一個 jekyll theme 的名字。</li>
+</ol>
+<p><img src="https://i.imgur.com/jV9OBXc.png" alt="theme-changed-to-jekyll-name"></p>
+<ol start="2">
+<li><code>_config.yml</code> 檔裡面的 theme 名字也要改掉。改完就可以推上去了。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https://hexo.io/plugins/</span><br><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line">theme: jekyll-theme-cayman     # change to this</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>去 setting 頁面將 theme 改成一樣的。</li>
+</ol>
+<p><img src="https://i.imgur.com/OZh27Gu.png" alt="theme-changed-in-setting"></p>
+<p>理論上…這樣應該就繞過 Github 檢查了。但是很不幸的，筆者的嘗試是失敗的。Github 送給我大大的錯誤:</p>
+<blockquote>
+<p>The value ‘{}’ was passed to a date-related filter that expects valid dates in <code>/_layouts/default.html</code> or one of its layouts. </p>
+</blockquote>
+<p>如果翻閱 Github Docs，它會表示這是因為有無效時間存在某些檔案中 (可能格式錯誤或時間值怪怪的吧)。但是筆者翻過了自己的專案，並沒有找到疑似時間值有問題的檔案，它提示的 <code>_layout/default.html</code> 也不見蹤影 (筆者為此納悶了很久)。</p>
+<p>雖然不知道問題出在哪裡，但是筆者有找到一個很厲害的解決方法，可以輕鬆解決這兩個問題: 直接在專案裡面新增一個 <code>.nojekyll</code> 檔案就可以了! 裡面什麼都不用打，空的就可以了。</p>
+<p><img src="https://i.imgur.com/bUvPUCQ.png" alt="nojekyll"></p>
+<p>這麼一來，就不用特地將 theme 改成其中一個 jekyll theme 的名字，時間的問題也不再發生了。</p>
+<h2 id="Conclusion-amp-後記"><a href="#Conclusion-amp-後記" class="headerlink" title="Conclusion &amp; 後記"></a>Conclusion &amp; 後記</h2><p>以上就是我這次架 hexo 部落格遇到的問題以及解法整理，希望對各位有幫助!</p>
+<p>這是我第一次寫 blog，請各位大大鞭子鞭小力一點 &gt;&lt;。初次寫 blog ，我覺得寫 blog 最棒的地方是，為了追求文章資訊的正確性，我得查很多資料、做一些測試，因而導正了一些原先錯誤的認知，自己覺得收穫不少~ 不過如果文章內容還是有誤，請各位不要吝嗇提醒我! 用 email 好了 -&gt; <a href="mailto:&#108;&#x65;&#97;&#102;&#x6f;&#x6c;&#x69;&#97;&#103;&#101;&#115;&#x40;&#x67;&#x6d;&#97;&#105;&#108;&#46;&#x63;&#x6f;&#x6d;">&#108;&#x65;&#97;&#102;&#x6f;&#x6c;&#x69;&#97;&#103;&#101;&#115;&#x40;&#x67;&#x6d;&#97;&#105;&#108;&#46;&#x63;&#x6f;&#x6d;</a></p>
+<p>阿里嘎多 :)</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/projects/">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Topic-1-%E5%B9%AB%E8%87%AA%E5%B7%B1%E9%81%B8%E4%B8%80%E5%80%8Btheme"><span class="toc-number">1.</span> <span class="toc-text">Topic 1: 幫自己選一個theme</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Topic-2-%E5%9C%A8-Github-Pages-%E9%83%A8%E7%BD%B2%E7%B6%B2%E7%AB%99"><span class="toc-number">2.</span> <span class="toc-text">Topic 2: 在 Github Pages 部署網站</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Topic-3-Github%E5%BC%B7%E8%BF%AB%E6%88%91%E6%8C%91%E4%B8%80%E5%80%8B%E4%BB%96%E5%80%91%E7%9A%84theme"><span class="toc-number">3.</span> <span class="toc-text">Topic 3: Github強迫我挑一個他們的theme?!</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Conclusion-amp-%E5%BE%8C%E8%A8%98"><span class="toc-number">4.</span> <span class="toc-text">Conclusion &amp; 後記</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://leafoliage.github.io/2021/06/16/must-notices-when-you-start-hexoing/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://leafoliage.github.io/2021/06/16/must-notices-when-you-start-hexoing/&text=開始玩Hexo時你必須注意的那些事"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://leafoliage.github.io/2021/06/16/must-notices-when-you-start-hexoing/&title=開始玩Hexo時你必須注意的那些事"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://leafoliage.github.io/2021/06/16/must-notices-when-you-start-hexoing/&is_video=false&description=開始玩Hexo時你必須注意的那些事"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=開始玩Hexo時你必須注意的那些事&body=Check out this article: https://leafoliage.github.io/2021/06/16/must-notices-when-you-start-hexoing/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://leafoliage.github.io/2021/06/16/must-notices-when-you-start-hexoing/&title=開始玩Hexo時你必須注意的那些事"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://leafoliage.github.io/2021/06/16/must-notices-when-you-start-hexoing/&title=開始玩Hexo時你必須注意的那些事"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://leafoliage.github.io/2021/06/16/must-notices-when-you-start-hexoing/&title=開始玩Hexo時你必須注意的那些事"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://leafoliage.github.io/2021/06/16/must-notices-when-you-start-hexoing/&title=開始玩Hexo時你必須注意的那些事"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://leafoliage.github.io/2021/06/16/must-notices-when-you-start-hexoing/&name=開始玩Hexo時你必須注意的那些事&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://leafoliage.github.io/2021/06/16/must-notices-when-you-start-hexoing/&t=開始玩Hexo時你必須注意的那些事"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2021
+    Leafoliage
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/projects/">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
